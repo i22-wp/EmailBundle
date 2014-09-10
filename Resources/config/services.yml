@@ -1,0 +1,16 @@
+parameters:
+    ton.email-bundle.dir: '%kernel.logs_dir%/emails'
+    ton.email-bundle.swift.file-transport.class: Ton\EmailBundle\Swift\FileTransport
+    ton.email-bundle.email-reader.class: Ton\EmailBundle\EmailReader
+
+services:
+    ton.email-bundle.swift.file-transport:
+        class: "%ton.email-bundle.swift.file-transport.class%"
+        calls:
+            - [setDir, ["%ton.email-bundle.dir%"]]
+    swiftmailer.mailer.transport.file:
+        alias: ton.email-bundle.swift.file-transport
+    ton.email-bundle.email-reader:
+        class: "%ton.email-bundle.email-reader.class%"
+        arguments:
+            - "%ton.email-bundle.dir%"

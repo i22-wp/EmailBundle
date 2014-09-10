@@ -1,0 +1,25 @@
+{
+    "name": "ton/email-bundle",
+    "type": "symfony-bundle",
+    "description": "Email bundle for test environment of Symfony2",
+    "keywords": ["email", "test", "cap"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ton Sharp",
+            "email": "66ton99@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php":                          ">=5.3.3",
+        "symfony/framework-bundle":     "~2.2",
+        "symfony/swiftmailer-bundle":   "~2.2",
+        "zendframework/zend-mail":      "2.3.*"
+    },
+
+    "autoload": {
+        "psr-0": { "Ton\\EmailBundle": "" }
+    },
+    "target-dir": "Ton/EmailBundle"
+}
