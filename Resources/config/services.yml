@@ -1,16 +1,16 @@
 parameters:
-    ton.email-bundle.dir: '%kernel.logs_dir%/emails'
-    ton.email-bundle.swift.file-transport.class: Ton\EmailBundle\Swift\FileTransport
-    ton.email-bundle.email-reader.class: Ton\EmailBundle\EmailReader
+    ton.email_bundle.dir: '%kernel.logs_dir%/emails'
+    ton.email_bundle.swift.file_transport.class: Ton\EmailBundle\Swift\FileTransport
+    ton.email_bundle.email_reader.class: Ton\EmailBundle\EmailReader
 
 services:
-    ton.email-bundle.swift.file-transport:
-        class: "%ton.email-bundle.swift.file-transport.class%"
+    ton.email_bundle.swift.file_transport:
+        class: "%ton.email_bundle.swift.file_transport.class%"
         calls:
-            - [setDir, ["%ton.email-bundle.dir%"]]
+            - [setDir, ["%ton.email_bundle.dir%"]]
     swiftmailer.mailer.transport.file:
-        alias: ton.email-bundle.swift.file-transport
-    ton.email-bundle.email-reader:
-        class: "%ton.email-bundle.email-reader.class%"
+        alias: ton.email_bundle.swift.file_transport
+    ton.email_bundle.email_reader:
+        class: "%ton.email_bundle.email_reader.class%"
         arguments:
-            - "%ton.email-bundle.dir%"
+            - "%ton.email_bundle.dir%"

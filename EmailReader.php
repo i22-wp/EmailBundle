@@ -1,7 +1,6 @@
 <?php
 namespace Ton\EmailBundle;
 
-
 class EmailReader
 {
     const EXTENSION = '.eml';
@@ -21,8 +20,25 @@ class EmailReader
     /**
      * @return array
      */
-    public function getAllFiles()
+    public function getAllEmails()
     {
         return glob($this->dir . '/*' . self::EXTENSION);
+    }
+
+    /**
+     * @param $filename
+     *
+     * @return Message
+     */
+    public function getEmail($filename)
+    {
+        return new Message(array('file' => $filename));
+    }
+
+    public function clear()
+    {
+        foreach ($this->getAllEmails() as $fileName) {
+            @unlink($fileName);
+        }
     }
 } 
