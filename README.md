@@ -1,51 +1,20 @@
 # EmailBundle
 
-Email bundle for test environment of Symfony2. It allows to store emails as *.eml files and read them after that.
+Email bundle for dev environment of Symfony 2 & 3. It allows to store emails as *.eml files and read them after that.
 
 
 ## Setup
 
-
-config_test.yml
+config_dev.yml
 
 ```yaml
+parameters:
+    ton.email_bundle.dir: '%kernel.root_dir%/../var/emails'
+
+...
+    
 swiftmailer:
-    transport: file
+    transport: ton.email_bundle.swift.file_transport
 ```
 
-and 'swiftmailer.transport.file' instead of 'file' for SwiftmailerBundle V2.2.?
-
-
-## Memory transport
-
-PhpUnitTest.php
-
-```php
-use Ton\EmailBundle\EventListener\EmailListener;
-
-    /**
-     * @todo check multiple initialization
-     */
-    protected function registerEmailListener()
-    {
-        $container = $this->getContainer();
-        $mailer = $container->get('mailer');
-        $plugin = new EmailListener();
-        $mailer->registerPlugin($plugin);
-        return $plugin;
-    }
-
-    /**
-     * @test
-     */
-    public function sendEmail()
-    {
-        $email = $this->registerEmailListener();
-        $email->clean();
-
-        // Send Email
-
-        $this->assertCount(1, $email->getPreSendMessages());
-        $email->getPreSendMessage(0);
-    }
-```
+For more info look here: https://github.com/66Ton99/EmailBundle
