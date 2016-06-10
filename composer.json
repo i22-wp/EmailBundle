@@ -1,19 +1,23 @@
 {
     "name": "ton/email-bundle",
     "type": "symfony-bundle",
-    "description": "Email bundle for test environment of Symfony2",
+    "description": "Email bundle for test environment of Symfony 2 & 3",
     "keywords": ["email", "test", "cap"],
     "license": "MIT",
     "authors": [
         {
             "name": "Ton Sharp",
             "email": "66ton99@gmail.com"
+        },
+        {
+            "name": "Wolfgang Pöhler",
+            "email": "wolfgang.poehler@i22.de"
         }
     ],
 
     "require": {
         "php":                          ">=5.3.3",
-        "symfony/framework-bundle":     "~2.2",
+        "symfony/framework-bundle":     "~2.3",
         "symfony/swiftmailer-bundle":   "~2.2",
         "zendframework/zend-mail":      "~2.1"
     },
