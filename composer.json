@@ -1,5 +1,5 @@
 {
-    "name": "ton/email-bundle",
+    "name": "i22wp/email-bundle",
     "type": "symfony-bundle",
     "description": "Email bundle for test environment of Symfony 2 & 3",
     "keywords": ["email", "test", "cap"],
