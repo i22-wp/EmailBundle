@@ -1,7 +1,7 @@
 {
-    "name": "i22wp/email-bundle",
+    "name": "serontoninja/email-bundle",
     "type": "symfony-bundle",
-    "description": "Email bundle for test environment of Symfony 2 & 3",
+    "description": "Symfony email bundle for dev environment.",
     "keywords": ["email", "test", "cap"],
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
         },
         {
             "name": "Wolfgang Pöhler",
-            "email": "wolfgang.poehler@i22.de"
+            "email": "serotoninja@gmail.com"
         }
     ],
 
