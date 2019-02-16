@@ -1,5 +1,5 @@
 parameters:
-    ton.email_bundle.dir: '%kernel.logs_dir%/emails'
+    ton.email_bundle.dir: '%kernel.project_dir%/var/emails'
     ton.email_bundle.swift.file_transport.class: Ton\EmailBundle\Swift\FileTransport
     ton.email_bundle.email_reader.class: Ton\EmailBundle\EmailReader
 
