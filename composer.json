@@ -1,5 +1,5 @@
 {
-    "name": "serontoninja/email-bundle",
+    "name": "serotoninja/email-bundle",
     "type": "symfony-bundle",
     "description": "Symfony email bundle for dev environment.",
     "keywords": ["email", "test", "cap"],
