@@ -182,4 +182,9 @@ class FileTransport implements Swift_Transport
     {
         $this->eventDispatcher->bindEventListener($plugin);
     }
+
+    public function ping()
+    {
+        return true;
+    }
 }
